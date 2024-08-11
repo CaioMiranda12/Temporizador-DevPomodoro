@@ -18,12 +18,11 @@ const longTime = 15 * 60;
 let currentMode = 'work';
 let temp;
 
+setMode(currentMode);
+
 function startTimer() {
     if (!isRunning) {
         isRunning = true;
-
-        timeLeft = getTimeForMode(currentMode);
-        updateDisplay();
 
         temp = setInterval(() => {
             timeLeft--;
@@ -80,7 +79,6 @@ workButton.addEventListener('click', () => setMode('work'));
 shortButton.addEventListener('click', () => setMode('short-break'));
 longButton.addEventListener('click', () => setMode('long-break'));
 
-// Funções para abrir e fechar o pop-up
 infoButton.addEventListener('click', () => {
     popup.style.display = 'flex';
 });
