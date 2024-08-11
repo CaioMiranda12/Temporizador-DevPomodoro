@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Temporizador Pomodoro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="./abacatinho.png" alt="imagem-do-abacatinho"/>
+
+    <div class="container">
+        <header>
+            <h1>DevPomodoro</h1>
+            <p>Melhore sua produtividade com o método Pomodoro.</p>
+        </header>
+
+        <main>
+            <div class="timer">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="controls">
+                <button onclick="startTimer()" id="start">Iniciar</button>
+                <button onclick="pauseTimer()" id="pause">Pausar</button>
+                <button onclick="resetTimer()" id="reset">Resetar</button>
+            </div>
+            <div class="session-selector">
+                <button class="session" id="work">Trabalho</button>
+                <button class="session" id="short-break">Pausa Curta</button>
+                <button class="session" id="long-break">Pausa Longa</button>
+            </div>
+            <!-- Botão para abrir o pop-up -->
+            <button id="info-button">O que é Pomodoro?</button>
+            <!-- Contador de Pomodoros -->
+            <div class="pomodoro-counter">
+                <p>Pomodoros Completos: <span id="pomodoro-count">0</span></p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Estrutura do Pop-up -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <!-- Botão de fechar pop-up -->
+            <span id="close-popup" class="close">&times;</span>
+            <h2>O Método Pomodoro</h2>
+            <p>O método Pomodoro é uma técnica de gerenciamento de tempo que ajuda a melhorar a concentração e a produtividade. Ele divide o trabalho em intervalos de 25 minutos chamados "Pomodoros", separados por pequenas pausas.</p>
+            <ul>
+                <li><strong>Passo 1:</strong> Escolha uma tarefa.</li>
+                <li><strong>Passo 2:</strong> Defina o temporizador para 25 minutos.</li>
+                <li><strong>Passo 3:</strong> Trabalhe até o tempo acabar.</li>
+                <li><strong>Passo 4:</strong> Faça uma pausa de 5 minutos.</li>
+                <li><strong>Passo 5:</strong> Após quatro Pomodoros, faça uma pausa mais longa.</li>
+            </ul>
+            <p>Use este método para manter o foco e a eficiência em suas tarefas diárias!</p>
+        </div>
+    </div>
+
+</body>
+<script src="./scripts.js"></script>
+</html>
